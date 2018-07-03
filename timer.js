@@ -34,12 +34,7 @@ function start(pressed){
 var counter = function(minutes, seconds, pressed){
     if (pressed === 1 ){
         countInt = setInterval(()=>{
-            if (seconds > 59 || minutes > 59) {
-                clearInterval(countInt)
-                pressed = 1;
-                startingPosition();
-                start(pressed=1)
-            }else if (seconds != 0){
+            if (seconds != 0){
                 seconds -= 1
             }else if(seconds == 0 && minutes != 0){
                 seconds = 59
